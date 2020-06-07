@@ -1,0 +1,16 @@
+{
+  "name": "local-user-angular-demo-nodejs",
+  "version": "0.1.0",
+  "description": "user REST API code using express, sqlite3, and JWT",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fabien Labrousse",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "sqlite3": "^4.2.0"
+  }
+}
