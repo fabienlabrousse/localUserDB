@@ -4,6 +4,7 @@ const sqlite3 = require('sqlite3').verbose();
 const express = require("express");
 const jwt = require('jsonwebtoken');
 const {passwordHasher} = require('./password-hasher');
+const cors = require('cors');
 
 
 
@@ -14,6 +15,7 @@ app.listen(HTTP_PORT, () => {
     console.log("Server is listening on port " + HTTP_PORT);
 });
 app.use(express.json());
+app.use(cors());
 
 const sqlite = new sqlite3.Database('./user_database.db', (err) => {
     if (err) {
@@ -67,7 +69,7 @@ app.get("/users", (req, res) => {
     });
 });
 
-app.post("/users/", (req, res) => {
+app.post("/users", (req, res) => {
     var reqBody = req.body;
     sqlite.run("INSERT INTO users (lastname, firstname, username, email, password) VALUES (?,?,?,?,?)",
         [reqBody.lastname, reqBody.firstname, reqBody.username, reqBody.email, passwordHasher(reqBody.password)],
