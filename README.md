@@ -3,7 +3,7 @@ Ce projet est utilisé pour tester des services en NodeJS avant de passer sur du
 
 Version 0.1
 
-Pour le lancer
+Pour le lancer, vous devez avoir Python d'installé, puis taper : 
 
 `npm install`
 
