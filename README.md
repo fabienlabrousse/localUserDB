@@ -5,6 +5,10 @@ Version 0.1
 
 Pour le lancer
 
+`npm install`
+
+puis
+
 `node server.js`
 
 Oubliez pas de modifier les const.js pour plus de sécurité ;)
